@@ -1,2 +1,1 @@
-# angular_test
-angular_first_test
+Тест для ангуляр js
