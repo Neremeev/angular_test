@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+  </head>
+
+
+  <body>
+
+  <div ng-init='books = [
+  {"title": "Книга о пище", "year": "1925"},
+  {"title": "Гамлет", "year": "1935"},
+  {"title": "Мертвые души", "year": "1945"},
+  {"title": "Война и мир", "year": "1955"}
+  ]'>
+  </div>
+
+
+    <div>
+      <input type="text"  id="name" ng-model="name">
+      <p><i id="res">{{name}}</i></p>
+
+
+      <p><input type="text" ng-model="search"></p>
+      <table>
+        <tr>
+          <th>Название</th>
+          <th>Год издания</th>
+        </tr>
+
+        <tr ng-repeat="book in books | filter : search">
+          <th>{{book.title}}</th>
+          <th>{{book.year}}</th>
+        </tr>
+
+      </table>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  </body>
+
+</html>
