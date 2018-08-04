@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mystyles.css" />
+</head>
+<body>
+<div  ng-controller="DomController">
+    <button ng-click="getAlert('Hell to World')">Не нажимай</button>
+    <button id="angButton">Жми</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller("DomController", function($scope, $window, $document){
+
+        $scope.getAlert = function (text){
+            $window.alert(text);
+        };
+        $document.find("button").on("click", function (event) {
+            $window.alert(event.target.innerText);
+        });
+    });
+</script>
+</body>
+</html>
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>-->
