@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="questApp">
+<meta charset="utf-8" />
+<head>
+    <div ng-controller="AnswerController">
+        <form name="answerForm">
+            <fieldset>
+                <p><label for="answerText">Текст ответа</label>
+                    <input id="answerText" ng-model="answer.text" required placeholder="Введите ответ" /></p>
+                <p><label for="answerAuthor">Автор ответа</label>
+                    <input id="answerAuthor" ng-model="answer.author" required placeholder="Введите автора" /></p>
+            </fieldset>
+            <p><button type="submit" ng-click="save(answer, answerForm)">Сохранить</button></p>
+        </form>
+        <div>Ответ:</div>
+        <p ng-bind="response.text"></p>
+        <p ng-bind="response.author"></p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/AnswerController.js"></script>
+    </body>
+</html>
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>-->
