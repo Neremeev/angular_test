@@ -6,6 +6,11 @@ var myApp = angular.module('myApp', [])
 
     $scope.addNew = function () {
         $scope.tasksArray.push($scope.tempInput)
+        $scope.tempInput = "";
+    }
+
+    $scope.deleteTask = function (index) {
+        $scope.tasksArray.splice(index,1)
     }
 
 
