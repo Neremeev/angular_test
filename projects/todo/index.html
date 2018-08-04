@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Мое приложение</title>
+</head>
+<body ng-controller="Ctrl">
+<form>
+    <h3>Добавь заданий!</h3>
+    <input type="text" ng-model="tempInput">
+    <button type="submit" ng-click="addNew()">Добавить</button>
+</form>
+<div>
+    <p ng-repeat="task in tasksArray">{{task}}</p>
+</div>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
